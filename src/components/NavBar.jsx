@@ -1,22 +1,31 @@
-import React from 'react';
-import CartWidget from './CartWidget';
-import { Navbar, Nav } from 'react-bootstrap';
+import CartWidget from "./Card/CardWidget"
+import React from "react"
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
-  return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Brand</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#categories">Categories</Nav.Link>
-          <Nav.Link href="#about">About</Nav.Link>
-        </Nav>
-        <CartWidget />
-      </Navbar.Collapse>
-    </Navbar>
-  );
-};
+    return ( 
+        <header class="NavBarJS">
+  <nav>
+  <h2>ZAPATILLAS OG</h2>
+    <ul>
+      <li>
+        <NavLink to='/' >inicio</NavLink>
+      </li>
+      <li>
+        <NavLink to='/categoria/nike' >nike</NavLink>
+      </li>
+      <li>
+        <NavLink to='/categoria/adidas' >adidas</NavLink>
+      </li>
+      <li class="iconn">
+      <CartWidget/>
+      </li>
+    </ul>
+    
+  </nav>
+  
+</header>
+    )
+}
 
-export default NavBar;
+export default NavBar
